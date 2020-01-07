@@ -15,6 +15,7 @@
         <module>multiple-core</module>
         <module>multiple-boot</module>
         <module>multiple-tool</module>
+        <module>multiple-test</module>
     </modules>
 
     <!--自定义属性-->
@@ -46,8 +47,22 @@
                 <artifactId>multiple-tool</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.10</version>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
     <!--编译配置-->
     <build>
         <plugins>

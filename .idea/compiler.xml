@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="multiple-boot" />
         <module name="multiple-core" />
+        <module name="multiple-test" />
         <module name="multiple-tool" />
       </profile>
     </annotationProcessing>
@@ -15,6 +16,7 @@
       <module name="multiple" target="1.8" />
       <module name="multiple-boot" target="1.8" />
       <module name="multiple-core" target="1.8" />
+      <module name="multiple-test" target="1.8" />
       <module name="multiple-tool" target="1.8" />
     </bytecodeTargetLevel>
   </component>
