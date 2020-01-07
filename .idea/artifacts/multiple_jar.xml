@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="multiple:jar">
+    <output-path>$PROJECT_DIR$/classes/artifacts/multiple_jar</output-path>
+    <root id="archive" name="multiple.jar">
+      <element id="module-output" name="multiple-boot" />
+      <element id="module-output" name="multiple-core" />
+      <element id="module-output" name="multiple-tool" />
+    </root>
+  </artifact>
+</component>
