@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="multiple-api" />
         <module name="multiple-boot" />
         <module name="multiple-core" />
         <module name="multiple-test" />
@@ -14,6 +15,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="multiple" target="1.8" />
+      <module name="multiple-api" target="1.8" />
       <module name="multiple-boot" target="1.8" />
       <module name="multiple-core" target="1.8" />
       <module name="multiple-test" target="1.8" />
