@@ -11,12 +11,12 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="multiple-boot" />
     <orderEntry type="module" module-name="multiple-core" />
     <orderEntry type="module" module-name="multiple-api" />
-    <orderEntry type="library" name="Maven: com.im.multiple:multiple-test:unknown" level="project" />
     <orderEntry type="module" module-name="multiple-tool" />
     <orderEntry type="library" name="Maven: com.typesafe:config:1.3.4" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.10" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />
+    <orderEntry type="library" name="Maven: junit:junit:4.10" level="project" />
+    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />
   </component>
 </module>

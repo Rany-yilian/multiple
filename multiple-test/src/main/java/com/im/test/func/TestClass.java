@@ -1,6 +1,7 @@
 package com.im.test.func;
 
 import com.im.bootstrap.BootJob;
+import com.im.tools.config.CC;
 import com.im.tools.config.data.RedisNode;
 import org.junit.Test;
 
@@ -12,5 +13,10 @@ public class TestClass {
         RedisNode rn = new RedisNode();
         System.out.println(rn.getClass());
         System.out.println(rn.getClass().getName());
+        printCC();
+    }
+
+    public void printCC(){
+        System.out.println(CC.mp.http.loadMapping());
     }
 }

@@ -21,6 +21,18 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>multiple-core</artifactId>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>multiple-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>multiple-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>multiple-tool</artifactId>
+        </dependency>
     </dependencies>
 
 
