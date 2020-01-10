@@ -8,7 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="multiple-api" />
         <module name="multiple-boot" />
+        <module name="multiple-common" />
         <module name="multiple-core" />
+        <module name="multiple-monitor" />
         <module name="multiple-test" />
         <module name="multiple-tool" />
       </profile>
@@ -17,7 +19,9 @@
       <module name="multiple" target="1.8" />
       <module name="multiple-api" target="1.8" />
       <module name="multiple-boot" target="1.8" />
+      <module name="multiple-common" target="1.8" />
       <module name="multiple-core" target="1.8" />
+      <module name="multiple-monitor" target="1.8" />
       <module name="multiple-test" target="1.8" />
       <module name="multiple-tool" target="1.8" />
     </bytecodeTargetLevel>

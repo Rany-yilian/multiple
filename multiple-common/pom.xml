@@ -6,27 +6,15 @@
         <artifactId>multiple</artifactId>
         <groupId>com.im.multiple</groupId>
         <version>0.8.1</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>multiple-core</artifactId>
-    <packaging>jar</packaging>
-    <name>multiple-core</name>
-    <description>IM实时通讯系统</description>
-    <url>https://github.com/Rany-yilian/multiple.git</url>
+    <artifactId>multiple-common</artifactId>
 
     <dependencies>
-        <!--<dependency>-->
-            <!--<groupId>${project.groupId}</groupId>-->
-            <!--<artifactId>multiple-netty</artifactId>-->
-            <!--<version>0.8.1</version>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>multiple-common</artifactId>
+            <artifactId>multiple-tool</artifactId>
         </dependency>
-
-
     </dependencies>
 </project>

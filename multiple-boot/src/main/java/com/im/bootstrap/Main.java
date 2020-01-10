@@ -1,11 +1,15 @@
 package com.im.bootstrap;
 
+import com.im.api.srd.ServiceNode;
+
+import com.im.core.MPushServer;
 import com.im.tools.config.CC;
+import com.im.tools.config.ConfigTools;
 
 public class Main {
 
     public static void main(String[] args){
-        System.out.println(CC.mp.net.connect_server_port);
-        System.out.println(CC.mp.http.loadMapping());
+        MPushServer mp = new MPushServer();
+
     }
 }
