@@ -12,5 +12,7 @@ public class MPushServer {
         System.out.println("gate--"+gatewayServerNode);
         ServiceNode websocketServerNode = ServerNodes.ws();
         System.out.println("websock--"+websocketServerNode);
+
+
     }
 }

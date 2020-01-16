@@ -9,11 +9,11 @@ public class ServerTestMain {
 
     @Test
     public void testServer(){
-        //start();
+        start();
         Main.main(null);
     }
 
     public static void start(){
-        System.out.println("start ");
+        Main.main(null);
     }
 }

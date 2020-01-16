@@ -11,9 +11,13 @@ public class TestClass {
     @Test
     public void test(){
         RedisNode rn = new RedisNode();
+        System.out.println(RedisNode.class);
         System.out.println(rn.getClass());
         System.out.println(rn.getClass().getName());
         printCC();
+        System.out.println(String.class.getClass());
+        System.out.println(String.class.getName());
+        System.out.println(String.class.getSimpleName());
     }
 
     public void printCC(){

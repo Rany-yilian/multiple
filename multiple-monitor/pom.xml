@@ -16,5 +16,12 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>mpush-tools</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>multiple-api</artifactId>
+        </dependency>
     </dependencies>
+
+
 </project>
