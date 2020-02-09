@@ -9,7 +9,7 @@ import com.im.tools.config.ConfigTools;
 public class Main {
 
     public static void main(String[] args){
-        MPushServer mp = new MPushServer();
-
+        ServerLauncher launcher = new ServerLauncher();
+        launcher.init();
     }
 }

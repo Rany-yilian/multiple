@@ -9,6 +9,10 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.regex.Pattern;
 
 import com.im.tools.config.CC;
+import io.netty.channel.EventLoopGroup;
+import io.netty.channel.SingleThreadEventLoop;
+import io.netty.util.concurrent.EventExecutor;
+import io.netty.util.concurrent.ThreadProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 public final class Utils {
@@ -36,6 +40,36 @@ public final class Utils {
             }
         }
         return false;
+    }
+
+    public static Map<String,Object> getPoolInfo(ThreadPoolExecutor executor){
+        Map<String,Object> info = new HashMap<>(5);
+        info.put("corePoolSize",executor.getCorePoolSize());
+        info.put("maxPoolSize",executor.getMaximumPoolSize());
+        info.put("activeCount(workingThread)",executor.getActiveCount());
+        info.put("poolSize(workThread)",executor.getPoolSize());
+        info.put("queueSize(blockedTask)",executor.getQueue().size());
+        return info;
+    }
+
+    public static Map<String,Object> getPoolInfo(EventLoopGroup executors){
+        Map<String,Object> info = new HashMap<>(3);
+        int poolSize = 0, queueSize = 0, activeCount = 0;
+        for (EventExecutor e:executors){
+            poolSize++;
+            if (e instanceof SingleThreadEventLoop){
+                SingleThreadEventLoop executor = (SingleThreadEventLoop) e;
+                queueSize +=executor.pendingTasks();
+                ThreadProperties tp = executor.threadProperties();
+                if(tp.state()==Thread.State.RUNNABLE){
+                    activeCount++;
+                }
+            }
+        }
+        info.put("poolSize(workThread)",poolSize);
+        info.put("activeCount(workingThread)",activeCount);
+        info.put("queueSize(blockedTask)",queueSize);
+        return info;
     }
 
     public static boolean isLocalHost(String host) {
@@ -170,15 +204,6 @@ public final class Utils {
         }
     }
 
-    public static Map<String, Object> getPoolInfo(ThreadPoolExecutor executor) {
-        Map<String, Object> info = new HashMap<>(5);
-        info.put("corePoolSize", executor.getCorePoolSize());
-        info.put("maxPoolSize", executor.getMaximumPoolSize());
-        info.put("activeCount(workingThread)", executor.getActiveCount());
-        info.put("poolSize(workThread)", executor.getPoolSize());
-        info.put("queueSize(blockedTask)", executor.getQueue().size());
-        return info;
-    }
 
     /*public static Map<String, Object> getPoolInfo(EventLoopGroup executors) {
         Map<String, Object> info = new HashMap<>(3);

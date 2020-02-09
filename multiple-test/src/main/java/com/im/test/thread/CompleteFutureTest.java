@@ -5,6 +5,18 @@ import java.util.concurrent.CompletableFuture;
 public class CompleteFutureTest {
 
     public static void main(String [] args){
+       /* CompletableFuture.supplyAsync(()->1)
+                    .thenApply(i->i+1)
+                    .thenApply(i->i*i)
+                    .whenComplete((r,e)->System.out.println(r));*/
+       /*System.out.println(CompletableFuture.supplyAsync(()->"Hello")
+               .thenApply(s->s+"world")
+               .thenApply(String::toUpperCase).join());*/
+       CompletableFuture.supplyAsync(()->"Hello")
+                .thenApply(s->s+"World")
+                .thenApply(String::toUpperCase)
+                .thenCombine(CompletableFuture.completedFuture("Java"),(s1,s2)->s1+s2)
+                .thenAccept(System.out::println);
         //变换结果
 //        String result = CompletableFuture.supplyAsync(()->{return "hello";}).thenApplyAsync(v->v+"world").join();
 //        System.out.println(result);
@@ -47,7 +59,7 @@ public class CompleteFutureTest {
 //        }),(s)->{return s;}).join();
 //        System.out.println(result);
         //exceptionally补偿
-        String result = CompletableFuture.supplyAsync(()->{
+        /*String result = CompletableFuture.supplyAsync(()->{
             try {
                 Thread.sleep(100);
             }catch (InterruptedException e){
@@ -61,6 +73,6 @@ public class CompleteFutureTest {
             System.out.println(e.getMessage());
             return "hello world";
         }).join();
-        System.out.println(result);
+        System.out.println(result);*/
     }
 }

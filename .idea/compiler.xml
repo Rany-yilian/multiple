@@ -11,6 +11,7 @@
         <module name="multiple-common" />
         <module name="multiple-core" />
         <module name="multiple-monitor" />
+        <module name="multiple-netty" />
         <module name="multiple-test" />
         <module name="multiple-tool" />
       </profile>
@@ -22,6 +23,7 @@
       <module name="multiple-common" target="1.8" />
       <module name="multiple-core" target="1.8" />
       <module name="multiple-monitor" target="1.8" />
+      <module name="multiple-netty" target="1.8" />
       <module name="multiple-test" target="1.8" />
       <module name="multiple-tool" target="1.8" />
     </bytecodeTargetLevel>

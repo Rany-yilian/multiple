@@ -10,7 +10,6 @@ public class ServerTestMain {
     @Test
     public void testServer(){
         start();
-        Main.main(null);
     }
 
     public static void start(){
